@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "node bin/index.js",
-    "build": "pkg . && node post-build.js",
+    "build": "pkg . && pkg . -t node22-macos-arm64 --fallback-to-source -o build/ios-uploader-macos-arm64 && node post-build.js",
     "lint": "eslint --max-warnings 0 ./bin/*.js ./lib/*.js ./test/*.js",
     "fix": "eslint --fix ./bin/*.js ./lib/*.js ./test/*.js",
     "test": "c8 mocha",
